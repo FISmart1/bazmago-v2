@@ -2,11 +2,13 @@ import Image from "next/image";
 import HeroLanding from "../components/hero";
 import EventHero from "@/components/countdown";
 import { SmoothCursor } from "@/components/ui/smooth-cursor";
+import BottomDockBar from "@/components/navbar";
 export default function Home() {
   return (
     <div className="dark:bg-black">
+      <BottomDockBar/>
       <SmoothCursor />
-      <HeroLanding />
+      <HeroLanding/>
       <EventHero
         title="PENDAFTARAN BATCH 1 SEDANG BERLANGSUNG"
         subtitle="Pendaftaran BAZMAGO Competition Batch 1 sedang berlangsung! Segera daftar sebelum tanggal 5 November 2025"

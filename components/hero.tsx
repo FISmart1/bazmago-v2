@@ -4,7 +4,7 @@ import { AuroraText } from "./ui/aurora-text";
 
 export default function HeroLanding() {
   return (
-    <section className="min-h-screen relative flex flex-col items-center justify-center text-center py-24 bg-black overflow-hidden">
+    <section id="beranda" className="min-h-screen relative flex flex-col items-center justify-center text-center py-24 bg-black overflow-hidden">
       <Meteors />
 
       {/* top gradient */}
