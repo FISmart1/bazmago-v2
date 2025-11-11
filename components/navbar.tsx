@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import LogoBazmago from "./logo"
 
 export default function BottomDockBar() {
   return (
@@ -10,7 +11,7 @@ export default function BottomDockBar() {
 
         {/* Logo Brand */}
         <Link href="/" className="font-bold tracking-wide text-white hover:text-cyan-400 transition text-sm sm:text-base">
-          BAZMAGo
+          <LogoBazmago/>
         </Link>
 
         <div className="hidden sm:block w-[1px] h-6 bg-white/20" />

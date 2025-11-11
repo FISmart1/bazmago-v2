@@ -48,7 +48,7 @@ export default function EventHero({ title, subtitle, start, end, target }: Props
     );
 
     return (
-        <section id="tentang" className="relative w-full min-h-[80vh] flex flex-col justify-center items-center text-center px-6 gap-6 bg-black overflow-hidden">
+        <section id="tentang" className="relative w-full min-h-screen relative flex flex-col items-center justify-center text-center flex flex-col justify-center items-center text-center px-6 gap-6 bg-black overflow-hidden ">
 
             {/* PARTICLES FULL */}
             <div className="absolute inset-0  ">
