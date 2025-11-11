@@ -6,6 +6,7 @@ import AboutSection from "@/components/about";
 import NumbersSection from "@/components/stats";
 import EventHero from "@/components/countdown";
 import CategorySection from "@/components/categori";
+import Cta from "@/components/cta";
 
 export default function Home() {
   return (
@@ -43,8 +44,18 @@ export default function Home() {
         />
       </section>
 
-      <section id="kategori" className="snap-start h-screen">
-        <CategorySection/>
+      <section
+        id="kategori"
+        className="snap-start h-screen overflow-y-scroll scrollbar-hide"
+      >
+        <div className="h-full">
+          <CategorySection />
+        </div>
+      </section>
+
+
+      <section id="cta" className="snap-start h-screen">
+        <Cta />
       </section>
     </div>
   );
