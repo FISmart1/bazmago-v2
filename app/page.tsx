@@ -17,9 +17,9 @@ export default function Home() {
   <section id="numbers" className="snap-start h-screen">
     <NumbersSection
       stats={[
-        { value: "2570", title: "Jumlah Peserta", sub: "" },
-        { value: "4821", title: "Jumlah Mitra", sub: "" },
-        { value: "220", title: "Jumlah Event", sub: "" },
+        { value: 2570, title: "Jumlah Peserta", sub: "" },
+        { value: 4821, title: "Jumlah Mitra", sub: "" },
+        { value: 220, title: "Jumlah Event", sub: "" },
       ]}
     />
   </section>

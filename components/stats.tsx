@@ -2,7 +2,7 @@ import { AuroraText } from "./ui/aurora-text"
 import { NumberTicker } from "./ui/number-ticker"
 
 type Stat = {
-  value: string | number;
+  value: number;
   title: string;
   sub?: string;
 }
