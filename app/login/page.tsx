@@ -3,22 +3,30 @@ import { useState } from "react";
 import { Meteors } from "@/components/ui/meteors";
 import { AuroraText } from "@/components/ui/aurora-text";
 import { FiMail, FiLock, FiEye, FiEyeOff } from "react-icons/fi";
+import { useRouter } from "next/navigation";
 
 export default function LoginPage() {
+    const router = useRouter();
   const [form, setForm] = useState({ email: "", password: "" });
   const [msg, setMsg] = useState("");
   const [showPassword, setShowPassword] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    const res = await fetch("/api/login", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(form),
-    });
-    const data = await res.json();
-    setMsg(data.message || data.error);
-  };
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+  const res = await fetch("/api/login", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(form),
+  });
+  const data = await res.json();
+  if (res.ok) {
+    localStorage.setItem("user", JSON.stringify(data.user)); // Simpan data user
+    router.push("/profil"); // Arahkan ke profil
+  } else {
+    setMsg(data.error);
+  }
+};
+
 
   return (
     <div className="relative min-h-screen flex justify-center items-center bg-black overflow-hidden text-white">
