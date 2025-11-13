@@ -34,7 +34,7 @@ export default function BottomDockBar() {
 
         <div className="hidden sm:block w-[1px] h-6 bg-white/20" />
 
-        <Link href="/auth" className="transition font-medium bg-teal-400 text-black hover:bg-teal-300 px-3 sm:px-4 py-2 rounded-lg text-sm sm:text-base">
+        <Link href="/login" className="transition font-medium bg-teal-400 text-black hover:bg-teal-300 px-3 sm:px-4 py-2 rounded-lg text-sm sm:text-base">
           Daftar
         </Link>
       </div>
