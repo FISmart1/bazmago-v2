@@ -6,7 +6,6 @@ type Props = {
   tagline:string
   desc:string
   batch1:string
-  batch2:string
   syarat:string[]
 }
 
