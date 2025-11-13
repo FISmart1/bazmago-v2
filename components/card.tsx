@@ -10,7 +10,7 @@ type Props = {
   syarat:string[]
 }
 
-export default function CategoryCard({index,title,tagline,desc,batch1,batch2,syarat}:Props){
+export default function CategoryCard({index,title,tagline,desc,batch1,syarat}:Props){
 
   return(
     <div className="relative w-full rounded-3xl border border-white/10 bg-[#05E3EA]/10 backdrop-blur-sm p-8 text-white shadow-xl">
@@ -32,10 +32,6 @@ export default function CategoryCard({index,title,tagline,desc,batch1,batch2,sya
         <div className="rounded-full border border-white/20 p-4 text-center">
           <p className="text-gray-300 text-sm">Biaya Batch 1</p>
           <p className="text-lg font-bold">{batch1}</p>
-        </div>
-        <div className="rounded-full border border-white/20 p-4 text-center">
-          <p className="text-gray-300 text-sm">Biaya Batch 2</p>
-          <p className="text-lg font-bold">{batch2}</p>
         </div>
       </div>
 
