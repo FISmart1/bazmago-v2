@@ -31,7 +31,7 @@ export default function CategorySection() {
   }
 
   return (
-    <section className="min-h-screen snap-start bg-black text-white py-24 px-6 flex flex-col items-center">
+    <section className="min-h-screen snap-start text-white py-24 px-6 flex flex-col items-center">
       <h1 className="text-4xl md:text-6xl font-extrabold text-center">
         Category Competition / Bidang Lomba
       </h1>
@@ -41,6 +41,7 @@ export default function CategorySection() {
           categories.map((item, index) => (
             <CategoryCard
               key={item.id}
+              id={item.id}
               index={index + 1}
               title={item.name_lomba}
               tagline={item.tagline}
@@ -48,10 +49,11 @@ export default function CategorySection() {
               batch1={`Rp ${item.biaya.toLocaleString("id-ID")}`}
               syarat={[
                 "Kompetisi bersifat individual",
-                "Peserta berasal dari jenjang SMA/SMK sederajat",
-                "Peserta merupakan Warga Negara Indonesia (WNI)"
+                "Peserta SMA/SMK sederajat",
+                "Warga Negara Indonesia"
               ]}
             />
+
           ))
         ) : (
           <p className="text-center col-span-2 text-gray-400">

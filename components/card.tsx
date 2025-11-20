@@ -1,31 +1,31 @@
-
+import { useRouter } from "next/navigation";
 
 type Props = {
-  index:number
-  title:string
-  tagline:string
-  desc:string
-  batch1:string
-  syarat:string[]
-}
+  id: number;
+  index: number;
+  title: string;
+  tagline: string;
+  desc: string;
+  batch1: string;
+  syarat: string[];
+};
 
-export default function CategoryCard({index,title,tagline,desc,batch1,syarat}:Props){
+export default function CategoryCard({ id, index, title, tagline, desc, batch1, syarat, }: Props) {
+  const router = useRouter();
 
-  return(
+  return (
     <div className="relative w-full rounded-3xl border border-white/10 bg-[#05E3EA]/10 backdrop-blur-sm p-8 text-white shadow-xl">
-      
+
       {/* index number */}
       <div className="absolute right-6 top-6 text-teal-400 font-bold text-2xl">
-        {String(index).padStart(2,"0")}
+        {String(index).padStart(2, "0")}
       </div>
 
       <h2 className="text-3xl font-bold">{title}</h2>
 
       <p className="text-teal-400 font-semibold mt-1">{tagline}</p>
 
-      <p className="mt-4 text-gray-300 leading-relaxed">
-        {desc}
-      </p>
+      <p className="mt-4 text-gray-300 leading-relaxed">{desc}</p>
 
       <div className="grid md:grid-cols-2 gap-4 mt-8">
         <div className="rounded-full border border-white/20 p-4 text-center">
@@ -36,17 +36,20 @@ export default function CategoryCard({index,title,tagline,desc,batch1,syarat}:Pr
 
       <h3 className="mt-8 font-bold text-gray-200">SYARAT PESERTA</h3>
       <ul className="mt-3 space-y-2">
-        {syarat.map((s,i)=>(
+        {syarat.map((s, i) => (
           <li key={i} className="flex items-start gap-2 text-gray-300 text-sm">
-            - 
-            {s}
+            - {s}
           </li>
         ))}
       </ul>
 
-      <button className="mt-8 w-full rounded-full bg-gradient-to-r from-teal-400 to-cyan-500 text-black py-3 font-semibold flex items-center justify-center gap-2 hover:opacity-90">
-        👁️  Lihat Detail
+      <button
+        onClick={() => router.push(`/daftar-lomba/${id}`)}
+
+        className="mt-8 w-full rounded-full bg-gradient-to-r from-teal-400 to-cyan-500 text-black py-3 font-semibold"
+      >
+        Daftar Sekarang
       </button>
     </div>
-  )
+  );
 }

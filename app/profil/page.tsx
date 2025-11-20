@@ -4,6 +4,8 @@ import { useRouter } from "next/navigation";
 import { AuroraText } from "@/components/ui/aurora-text";
 import { Meteors } from "@/components/ui/meteors";
 import CategorySection from "@/components/categori";// pastikan path ini benar
+import Profil from '../../components/profilPage';
+
 
 export default function ProfilePage() {
   const router = useRouter();
@@ -32,40 +34,45 @@ export default function ProfilePage() {
 
       {/* top aurora */}
       <div className="absolute top-0 left-0 w-full h-[40%] bg-gradient-to-b from-cyan-500/30 to-transparent blur-2xl opacity-50" />
-
-      <div className="relative z-10 flex flex-col items-center py-16 px-6 text-center">
-        <h1 className="text-4xl font-bold mb-6">
-          <AuroraText>Profil Peserta</AuroraText>
-        </h1>
-
-        {/* 🧍 Biodata */}
-        <div className="bg-gray-900/60 backdrop-blur-md border border-cyan-400/30 p-6 rounded-2xl w-full max-w-xl text-left shadow-[0_0_25px_rgba(0,255,255,0.2)]">
-          <p><span className="font-semibold text-cyan-300">Nama:</span> {user.name}</p>
-          <p><span className="font-semibold text-cyan-300">Tanggal Lahir:</span> {user.tl}</p>
-          <p><span className="font-semibold text-cyan-300">Sekolah:</span> {user.sekolah}</p>
-          <p><span className="font-semibold text-cyan-300">Email:</span> {user.email}</p>
-
-          <button
-            onClick={() => {
-              localStorage.removeItem("user");
-              router.push("/login");
-            }}
-            className="mt-6 w-full py-2 rounded-md bg-teal-400 hover:bg-teal-300 text-black font-semibold transition"
-          >
-            Logout
-          </button>
-        </div>
-
-        {/* 🏆 Kategori Lomba */}
-        <section
-          id="kategori"
-          className="mt-16 snap-start h-screen overflow-y-scroll scrollbar-hide w-full"
-        >
-          <div className="h-full">
-            <CategorySection />
+      {/* Navbar */}
+      <section className="relative w-full relative flex flex-col items-center justify-center text-center flex flex-col justify-center items-center text-center px-6 gap-6 overflow-hidden ">
+        <div className="flex w-6xl justify-between items-center mt-10">
+          <div className="text-justify">
+            <h1 className="text-4xl font-bold">
+              <AuroraText>Dashboard Peserta</AuroraText>
+            </h1>
+            <p className="text-gray-400">Selamat Datang, <span className="text-white">{user.name}</span></p>
           </div>
-        </section>
-      </div>
+          <div className="flex gap-2">
+            <div className="text-end">
+              <h1 className="">{user.name}</h1>
+              <span className="text-gray-400">{user.sekolah}</span>
+            </div>
+            <div className="p-4 bg-white rounded-full w-10 h-10 text-black flex items-center justify-center mt-2">
+              <h4>{user.name?.charAt(0)}</h4>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/*Gabung wa */}
+      <section className="relative w-full relative flex flex-col items-center justify-center text-center flex flex-col justify-center items-center text-center px-6 gap-6 overflow-hidden ">
+        <div className="flex w-6xl justify-between items-center mt-10 bg-gray-900/60 backdrop-blur-md border border-cyan-400/30 p-4 rounded-2xl">
+          <div className="text-justify">
+            <h1 className="text-xl font-bold text-white">
+              Ayo Gabung Komunitas Lomba!
+            </h1>
+            <p className="text-gray-400">Selamat Datang, <span className="text-white">{user.name}</span></p>
+          </div>
+          <div className="">
+            <div className="px-4 py-2 bg-gradient-to-r from-teal-400 to-cyan-500 text-black font-semibold rounded-full hover:opacity-90 cursor-pointer">
+              <a href="">
+                Gabung Sekarang!
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <Profil/>
     </section>
   );
 }
