@@ -11,21 +11,24 @@ export default function LoginPage() {
   const [msg, setMsg] = useState("");
   const [showPassword, setShowPassword] = useState(false);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
   e.preventDefault();
   const res = await fetch("/api/login", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(form),
   });
+
   const data = await res.json();
+
   if (res.ok) {
-    localStorage.setItem("user", JSON.stringify(data.user)); // Simpan data user
-    router.push("/profil"); // Arahkan ke profil
+    localStorage.setItem("user", JSON.stringify(data.user));
+    router.push("/profil");
   } else {
     setMsg(data.error);
   }
 };
+
 
 
   return (
