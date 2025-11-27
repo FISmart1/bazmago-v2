@@ -36,11 +36,11 @@ export default function BottomDockBar() {
           Tentang
         </Link>
 
-        <Link href="/timeline" className="text-white hover:text-cyan-400 transition font-medium text-sm sm:text-base hidden sm:block">
+        <Link href="#timeline" className="text-white hover:text-cyan-400 transition font-medium text-sm sm:text-base hidden sm:block">
           Timeline
         </Link>
 
-        <Link href="/lomba" className="text-white hover:text-cyan-400 transition font-medium text-sm sm:text-base hidden sm:block">
+        <Link href="#kategori" className="text-white hover:text-cyan-400 transition font-medium text-sm sm:text-base hidden sm:block">
           Lomba
         </Link>
 
