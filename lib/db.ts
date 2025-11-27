@@ -3,9 +3,9 @@ import mysql from 'mysql2/promise';
 
 // buat koneksi pool ke MySQL lokal
 const pool = mysql.createPool({
-  host: 'localhost',
-  user: 'root',           // ganti sesuai user MySQL kamu
-  password: '',           // isi kalau ada password
+  host: '127.0.0.1',
+  user: 'ucup',           // ganti sesuai user MySQL kamu
+  password: '12345',           // isi kalau ada password
   database: 'bazmago', // ganti nama DB kamu
 });
 
