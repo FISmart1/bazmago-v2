@@ -31,7 +31,7 @@ export default function CategorySection() {
   }
 
   return (
-    <section className="min-h-screen snap-start text-white py-24 px-6 flex flex-col items-center">
+    <section className="min-h-screen snap-start text-white py-24 px-6 flex flex-col items-center bg-black">
       <h1 className="text-4xl md:text-6xl font-extrabold text-center">
         Category Competition / Bidang Lomba
       </h1>
