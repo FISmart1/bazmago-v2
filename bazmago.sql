@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 27 Nov 2025 pada 04.53
+-- Waktu pembuatan: 27 Nov 2025 pada 05.02
 -- Versi server: 10.4.28-MariaDB
 -- Versi PHP: 8.0.28
 
@@ -80,17 +80,18 @@ CREATE TABLE `users` (
   `tl` date DEFAULT NULL,
   `sekolah` varchar(20) DEFAULT NULL,
   `email` varchar(50) DEFAULT NULL,
-  `password` varchar(10) DEFAULT NULL
+  `password` varchar(10) DEFAULT NULL,
+  `kategori_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data untuk tabel `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `tl`, `sekolah`, `email`, `password`) VALUES
-(1, 'ucup', '2025-11-06', 'smktibazma', 'yusuf@gmail.com', '$2b$10$K3x'),
-(2, 'cup', '2025-11-08', 'p', 'p@gmail.com', '$2b$10$8kB'),
-(3, 'Nur Yusuf Ferdiansyah', '2025-11-06', 'SMK TI BAZMA', 'a@gmail.com', '12345678');
+INSERT INTO `users` (`id`, `name`, `tl`, `sekolah`, `email`, `password`, `kategori_id`) VALUES
+(1, 'ucup', '2025-11-06', 'smktibazma', 'yusuf@gmail.com', '$2b$10$K3x', NULL),
+(2, 'cup', '2025-11-08', 'p', 'p@gmail.com', '$2b$10$8kB', NULL),
+(3, 'Nur Yusuf Ferdiansyah', '2025-11-06', 'SMK TI BAZMA', 'a@gmail.com', '12345678', NULL);
 
 --
 -- Indexes for dumped tables
