@@ -1,14 +1,11 @@
 import mysql from 'mysql2/promise';
 
 const pool = mysql.createPool({
-  host: 'nozomi.proxy.rlwy.net',
-  port: 10360,
-  user: 'root',
-  password: 'TpQaGRDedFRJQOvUCRMfKikAHWynQVUX',
-  database: 'railway',
-  ssl: {
-    rejectUnauthorized: false,
-  },
+  host: '127.0.0.1',
+  port: 3306,       // default MySQL
+  user: 'ucup',     // default XAMPP
+  password: '12345',     // kosong kalau pakai XAMPP
+  database: 'bazmago', 
 });
 
 export async function query<T = any>(sql: string, params?: any[]): Promise<T[]> {
