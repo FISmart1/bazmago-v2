@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Bazma Go — Sistem Pendaftaran & Manajemen Lomba Online
+Deskripsi Singkat
 
-## Getting Started
+Bazma Go adalah platform digital untuk mengelola proses pendaftaran lomba secara online. Sistem ini membantu panitia dan peserta dalam melakukan pendataan, verifikasi, dan pemantauan status lomba dengan cepat, akurat, dan transparan. Proyek ini dibuat untuk menggantikan metode manual yang sering menyebabkan data berantakan, komunikasi lambat, dan risiko kehilangan informasi.
 
-First, run the development server:
+Fitur Utama
+✅ 1. Dashboard Peserta
 
-```bash
+Menampilkan biodata lengkap
+
+Riwayat lomba yang pernah diikuti
+
+Status pendaftaran (diterima, menunggu, ditolak)
+
+Informasi detail lainnya
+Dashboard membuat peserta merasa memiliki akun resmi dan data yang tersimpan rapi.
+
+✅ 2. Pendaftaran Lomba Online
+
+Formulir mudah diisi
+
+Upload berkas pendukung
+
+Konfirmasi otomatis setelah submit
+
+Data langsung masuk database tanpa proses manual
+
+✅ 3. Tampilan Modern & Responsif
+
+UI futuristik dan profesional
+
+Didukung tampilan mobile & desktop
+
+Styling menggunakan Tailwind CSS
+
+Efek neon untuk estetika modern
+
+✅ 4. Sistem Terstruktur
+
+Alur pendaftaran jelas (flowchart)
+
+Data aman, rapi, dan mudah diverifikasi
+
+Tech Stack
+Teknologi	Fungsi
+TypeScript	Bahasa pemrograman utama
+Next.js	Frontend & REST API Framework
+MySQL	Basis data utama
+Tailwind CSS	Styling UI
+PROXMOX	Virtualisasi & container aplikasi
+GitHub	Version control & repository
+Cloudflare	CDN, keamanan, dan perantara trafik
+
+Cara Menjalankan Proyek
+1. Clone Repository
+git clone https://github.com/username/bazma-go.git
+cd bazma-go
+
+2. Install Dependencies
+npm install
+
+3. Jalankan Project
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Link Demo
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+🌐 Website: https://go.nyusuf.my.id
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🌐 Alternatif: www.go.my.id
